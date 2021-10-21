@@ -31,6 +31,9 @@ class ConnectFour(TwoPlayerGame):
         return find_four(self.board, self.opponent_index)
 
     def is_over(self):
+        """
+        Checking if the game ended either by lack of moves or winning condition met
+        """
         return (self.board.min() > 0) or self.lose()
 
     def scoring(self):
